@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: hsl(15, 10%, 92%);">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand fw-bold" style="color:  rgb(39, 48, 92);" ><i class="fa-solid fa-school-circle-check fa-beat-fade fa-sm p-1 me-1"></i>EdTech
+            <div> <h6 class=" fw-bold">IT Training</h6></div></a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li *ngIf="logindisable" class="nav-item  fw-bold" style="color:  rgb(39, 48, 92);"><a class="nav-link "  href="">Home</a></li>
+                <li *ngIf="logindisable" class="nav-item text-white fw-bold"><a class="nav-link" href="courses">Courses</a></li>
+                <li class="nav-item text-white fw-bold"><a class="nav-link" href="userhome">About</a></li>
+                <li *ngIf="logindisable" class="nav-item text-white fw-bold"><a class="nav-link" href="contact">Contact Us</a></li>
+                <li  class="nav-item text-white fw-bold"><a class="nav-link" href="blog">Blog</a></li>
+            </ul>
+        </div>
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul><li  class="nav-item text-white fw-bold "><a class="nav-link " href="login">Logout</a></li></ul>
+           
+        </div> -->
+        <div>
+            <ul><p *ngIf="logindisable" class="nav-item text-white fw-bold mb-3"><i class="fa-solid fa-user fa-xl  mt-5" style="color:  rgb(39, 48, 92);" routerLink="login">Login</i></p>
+                <button class="btn text-white mt-4" *ngIf="adminLogout" (click)="logout()" >Logout</button>
+            </ul>
+           
+        </div>
+    </div>
+    
+</nav>
+  

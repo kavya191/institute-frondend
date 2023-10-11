@@ -1,0 +1,76 @@
+
+<div class="container-fluid">
+    <div class="row justify-content-center ">
+        <div class="col-lg-7">
+            <div class="card shadow-lg border-0 rounded-lg mt-3">
+                <div class="card-header"><h3 class="text-center fw-bolder text-white p-1">Add Courses</h3></div>
+                <div class="card-body">
+                    <form [formGroup]="addCourseForm">
+                       
+                        <div class="form-floating mb-2">
+                            <input  formControlName="courseid" class="form-control" id="courseid" name="cid" type="text"  />
+                            <label class="text-dark fw-bold" for="">Course Id</label>
+                        </div>
+                        <div class="p-2"  *ngIf="addCourseForm.get('courseid')?.errors&& addCourseForm.get('courseid')?.touched">
+                            <p class="text-danger">accept numbers only</p>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input formControlName="coursename" class="form-control" id="cname" type="text"  />
+                            <label class="text-dark fw-bold" for="">Course Name</label>
+                        </div>
+                        <div class="p-2"  *ngIf="addCourseForm.get('coursename')?.errors&& addCourseForm.get('coursename')?.touched">
+                            <p class="text-danger">accept characters only</p>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input formControlName="description"  class="form-control" id="cname" type="text"  />
+                            <label class="text-dark fw-bold" for="">Description </label>
+                        </div>
+                        <div class="p-2"  *ngIf="addCourseForm.get('description')?.errors&& addCourseForm.get('description')?.touched">
+                            <p class="text-danger">accept characters only</p>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input formControlName="duration"  class="form-control" id="cname" type="text"  />
+                            <label class="text-dark fw-bold" for="">Course Duration </label>
+                        </div>
+                        <div class="p-2"  *ngIf="addCourseForm.get('duration')?.errors&& addCourseForm.get('duration')?.touched">
+                            <p class="text-danger">accept numbers only</p>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input formControlName="coursefee"  class="form-control" id="duration" type="text"  />
+                            <label class="text-dark fw-bold" for="">Course Fee </label>
+                        </div>
+                        <div class="p-2"  *ngIf="addCourseForm.get('coursefee')?.errors&& addCourseForm.get('coursefee')?.touched">
+                            <p class="text-danger">accept numbers only</p>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input formControlName="seat"  class="form-control" id="fee" type="text"  />
+                            <label class="text-dark fw-bold" for="">seat</label>
+                        </div>
+                        <div class="p-2"  *ngIf="addCourseForm.get('seat')?.errors&& addCourseForm.get('seat')?.touched">
+                            <p class="text-danger">accept numbers only</p>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input  formControlName="time" class="form-control" id="seat" type="text"  />
+                            <label class="text-dark fw-bold" for="">Class Time</label>
+                        </div>
+                        <div class="p-2"  *ngIf="addCourseForm.get('time')?.errors&& addCourseForm.get('time')?.touched">
+                            <p class="text-danger">accept numbers only  </p>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input formControlName="place"  class="form-control" id="cplace" name="cPlace" type="text"  />
+                            <label class="text-dark fw-bold" for="">Place</label>
+                        </div>
+                        <div class="p-2"  *ngIf="addCourseForm.get('place')?.errors&& addCourseForm.get('place')?.touched">
+                            <p class="text-danger">accept characters only</p>
+                        </div>
+                        <div class="mt-4 mb-0 d-flex justify-content-center">
+                          <button class="btn btn-info" (click)="addCourse()" >Add</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+

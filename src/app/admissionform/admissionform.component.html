@@ -1,0 +1,92 @@
+
+<div class="row justify-content-center">
+ 
+   <div class="col-lg-8 ">
+    <div class="card shadow-lg border-1 rounded-lg mt-3 ">
+        <div class="card-header"><h3 class="text-center font-weight-light my-4 text-white fw-bolder p-2" style="background-color: rgb(135, 71, 135);">Admission Form</h3></div>
+        <div class="card-body ">
+            <form [formGroup]="userAdmissionForm"  >
+                <div class="form-floating mb-3">
+                    <input formControlName="fullname"  class="form-control" id="fullname" name="fname" type="text"  />
+                    <label for="">Full Name</label>
+                </div>
+                <div class="p-2"  *ngIf="userAdmissionForm.get('fullname')?.errors&& userAdmissionForm.get('fullname')?.touched">
+                    <p class="text-danger">This field is required</p>
+                </div>
+                <div class="form-floating mb-3">
+                    <input formControlName="dob" class="form-control" id="dob" name="bdate" type="date"  />
+                    <label for="">Date Of Birth</label>
+                </div>
+                <div class="p-2"  *ngIf="userAdmissionForm.get('dob')?.errors&& userAdmissionForm.get('dob')?.touched">
+                    <p class="text-danger">This field is required</p>
+                </div>
+                <div class="form-floating mb-3">
+                    <input formControlName="contactno" class="form-control" id="cno" name="cnum" type="number"  />
+                    <label for="">Contact Number</label>
+                </div>
+                <div class="p-2"  *ngIf="userAdmissionForm.get('contactno')?.errors&& userAdmissionForm.get('contactno')?.touched">
+                    <p class="text-danger">This field is required</p>
+                </div>
+                <div class="form-floating mb-3">
+                    <input formControlName="email"  class="form-control" id="email" name="useremail" type="text"  />
+                    <label for="">Email</label>
+                </div>
+                <div class="p-2"  *ngIf="userAdmissionForm.get('email')?.errors&& userAdmissionForm.get('email')?.touched">
+                    <p class="text-danger">This field is required</p>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="degree" type="text"  />
+                    <select  formControlName="qualification"  name="hq" id="hq" class="d-flex justify-content-end">
+                        <option value="BTech">Btech</option>
+                        <option value="BCA">BCA</option>
+                        <option value="+2">+2</option>
+                        <option value="Non IT">Non IT</option>
+                      </select>
+                    <label for="">Highest Qualification </label>
+                  
+                </div>
+                  <div class="p-2"  *ngIf="userAdmissionForm.get('qualification')?.errors&& userAdmissionForm.get('qualification')?.touched">
+                    <p class="text-danger">This field is required</p>
+                </div>
+                <div class="form-floating mb-3">
+                    <input formControlName="year"  class="form-control" id="yp" type="year"  />
+                    <label for="">Year of Passout</label>
+                </div>
+                <div class="p-2"  *ngIf="userAdmissionForm.get('year')?.errors&& userAdmissionForm.get('year')?.touched">
+                    <p class="text-danger">This field is required</p>
+                </div>
+                <div class="form-floating mb-3">
+                    <input formControlName="percentage" class="form-control" id="fee" type="number"  />
+                    <label for="">Mark/Percentage</label>
+                </div>
+                <div class="p-2"  *ngIf="userAdmissionForm.get('percentage')?.errors&& userAdmissionForm.get('percentage')?.touched">
+                    <p class="text-danger">This field is required</p>
+                </div>
+                <div class="form-floating mb-3">
+                    <input formControlName="idproof" class="form-control" id="seat" type="file"  />
+                    <label for="">ID Proof</label>
+                </div>
+                <div class="p-2"  *ngIf="userAdmissionForm.get('idproof')?.errors&& userAdmissionForm.get('idproof')?.touched">
+                    <p class="text-danger">This field is required</p>
+                </div>
+                <div class="form-floating mb-3">
+                    <input formControlName="photo"  class="form-control" id="seat" type="file"  />
+                    <label for="">Photo</label>
+                </div>
+                <div class="p-2"  *ngIf="userAdmissionForm.get('photo')?.errors&& userAdmissionForm.get('photo')?.touched">
+                    <p class="text-danger">This field is required</p>
+                </div>
+                <div class="mt-4 mb-0 d-flex justify-content-center p-4">
+                  <button (click)="studentAdmission()" type="submit" class="btn btn-secondary">Submit</button>
+                </div>
+            </form>
+        </div>
+     
+     </div> 
+</div>
+  </div>
+
+
+
+
+

@@ -1,0 +1,88 @@
+<!-- Class Start -->
+<div class="container-fluid pt-5  ">
+  <div class="container">
+    <div class="text-center pb-2">
+      <div class="section-title px-5 p-5">
+        <h4 class="px-2 fw-bolder" style="color:rgb(39, 48, 92);">Training Programs</h4>
+      </div>
+
+    </div>
+    <div>
+      <!-- <nav class="navbar navbar-light me-5" style="background-color: #968584;">
+        <form class="form-inline">
+          <input  name="searchdata" id="datasearch"
+            class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+          <button class="btn bg-secondary-subtle  my-2 my-sm-0" type="submit">Search</button> -->
+        <!-- </form> -->
+      <!-- </nav>  -->
+    </div>
+   
+    <div class="container px-4 px-lg-5 mb-3">
+      <div class="row  d-flex justify-content-between">
+
+        <div *ngFor="let i of courses "
+          class="card border-0 bg-light shadow-sm pb-2" class="col mb-5">
+
+          <!-- <div class="card-body text-center">
+                <h4 class="card-title">{{i.coursename}}</h4>
+                <p class="card-text">
+                 {{i.description}}
+                </p>
+              </div> -->
+
+
+          <div class="card1">
+            <div class="card-body ">
+              <h2 class="card-title">{{i.coursename}}</h2>
+              <p class="card-text">{{i.description}}</p>
+              <p class="card-text text-dark fw-bold">Course Fee :{{i.coursefee}}</p>
+              <p class="card-text text-dark fw-bold">Duration:{{i.duration}}</p>
+              <p class="card-text text-dark fw-bold">Date : Oct 13th 2023</p>
+              <p class="card-text text-dark fw-bold">Time : {{i.time}} AM/2 hours/day</p>
+              <p class="card-text text-dark fw-bold">Seat : {{i.seat}}</p>
+           
+              <a href="singleview/{{i.courseid}}" class=" px-4 mx-auto mb-4"><button class="btn">Take Addmission</button></a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card-footer bg-transparent py-4 px-5">
+                <div class="row border-bottom mt-1 mb-1">
+                  <h4>NEXT BATCH</h4>
+                  <div class="col-12 py-1 text-right border-right">
+                    <strong>Place & Date</strong>
+                  </div>
+                  <div class="col-6 py-1">Oct 13th 2023 (Offline & Online) & {{i.place}}</div>
+                </div>
+                <div class="row border-bottom">
+                  <div class="col-6 py-1 text-right border-right">
+                    <strong>Duration</strong>
+                  </div>
+                  <div class="col-6 py-1">{{i.duration}} Month</div>
+                </div>
+                <div class="row border-bottom">
+                  <div class="col-6 py-1 text-right border-right">
+                    <strong>Class Time</strong>
+                  </div>
+                  <div class="col-6 py-1">{{i.time}} AM</div>
+                </div>
+                <div class="row">
+                  <div class="col-6 py-1 text-right border-right">
+                    <strong>Tution Fee</strong>
+                  </div>
+                  <div class="col-6 py-1">{{i.coursefee}} /-</div>
+                </div>
+              </div> -->
+      
+      </div>
+
+
+      <!-- <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div> -->
+    </div>

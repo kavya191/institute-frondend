@@ -1,0 +1,97 @@
+<!-- Contact Start -->
+<div class="container-fluid pt-5" style="background-color:  rgb(39, 48, 92);">
+  <div class="container">
+    <div class="text-center pb-2">
+      <p class="section-title px-5">
+        <span class="px-2 text-dark">Get In Touch</span>
+      </p>
+      <h1 class="mb-4 text-white">Contact Us For Any Query</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-7 mb-5">
+        <div class="contact-form">
+          <div id="success"></div>
+          <form [formGroup]="enquiryForm" name="sentMessage" id="contactForm" novalidate="novalidate">
+            <div class="control-group">
+              <input formControlName="uname" type="text" class="form-control" id="name" placeholder="Your Name"
+                required="required" data-validation-required-message="Please enter your name" />
+              <p class="help-block text-danger"></p>
+            </div>
+            <div class="p-2" *ngIf="enquiryForm.get('uname')?.errors&& enquiryForm.get('uname')?.touched">
+              <p class="text-danger">accept characters only</p>
+            </div>
+            <div class="control-group">
+              <input formControlName="email" type="email" class="form-control" id="email" placeholder="Your Email"
+                required="required" data-validation-required-message="Please enter your email" />
+              <p class="help-block text-danger"></p>
+            </div>
+            <div class="p-2" *ngIf="enquiryForm.get('email')?.errors&& enquiryForm.get('email')?.touched">
+              <p class="text-danger">accept characters,special characters and numbers only</p>
+            </div>
+            <div class="control-group">
+              <input formControlName="subject" type="text" class="form-control" id="subject" placeholder="Subject"
+                required="required" data-validation-required-message="Please enter a subject" />
+              <p class="help-block text-danger"></p>
+            </div>
+            <div class="p-2" *ngIf="enquiryForm.get('subject')?.errors&& enquiryForm.get('subject')?.touched">
+              <p class="text-danger">accept characters only</p>
+            </div>
+            <div class="control-group">
+              <textarea formControlName="message" class="form-control" rows="6" id="message" placeholder="Message"
+                required="required" data-validation-required-message="Please enter your message"></textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+            <div class="p-2" *ngIf="enquiryForm.get('message')?.errors&& enquiryForm.get('message')?.touched">
+              <p class="text-danger">accept characters only</p>
+            </div>
+            <div>
+              <button (click)="userEnquiry()" class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton"
+                style="background-color:rgb(39, 48, 92) ">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-5 mb-5">
+        <p class="text-white">
+          If you require clarifications on any of the courses or the admission process, we are happy to help
+        </p>
+        <div class="d-flex">
+          <i class="fa fa-map-marker-alt d-inline-flex align-items-center justify-content-center   rounded-circle"
+            style="width: 45px; height: 45px"></i>
+          <div class="pl-3">
+            <h5 class="text-white">Address</h5>
+            <p class="text-white">Near Civil Station,Kakkanad, Kochi</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <i class="fa fa-envelope d-inline-flex align-items-center justify-content-center   rounded-circle"
+            style="width: 45px; height: 45px"></i>
+          <div class="pl-3">
+            <h5 class="text-white">Email</h5>
+            <p class="text-white">edtech@gmail.com</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <i class="fa fa-phone-alt d-inline-flex align-items-center justify-content-center   rounded-circle"
+            style="width: 45px; height: 45px"></i>
+          <div class="pl-3">
+            <h5 class="text-white">Phone</h5>
+            <p class="text-white">982 345 6789</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <i class="far fa-clock d-inline-flex align-items-center justify-content-center   rounded-circle"
+            style="width: 45px; height: 45px"></i>
+          <div class="pl-3">
+            <h5 class="text-white">Opening Hours</h5>
+            <strong class="text-white">Monday - Friday:</strong>
+            <p class="m-0 text-white">08:00 AM - 05:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact End -->

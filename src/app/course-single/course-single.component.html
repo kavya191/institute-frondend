@@ -1,0 +1,32 @@
+
+<div class="container" *ngIf="!loading">
+    <div>
+        <h1 class="text-center mt-5 text-white p-2" style="background-color: rgb(105, 59, 105);">{{cData.coursename}}</h1>
+
+        <p class="text-center mt-3 text-dark">{{cData.description}}</p>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="card" style="width: 18rem; background-color: rgb(125, 91, 125);">
+         
+            <div class="card-body ">
+              <h5 class="card-title text-white">{{cData.coursename}}</h5>
+              <p class="card-text text-white">{{cData.description}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-dark fw-bolder">Course Fee:{{cData.coursefee}}</li>
+              <li class="list-group-item">Duration : {{cData.duration}} month</li>
+              <li class="list-group-item">Time : {{cData.time}}</li>
+              <li class="list-group-item">Time : {{cData.place}}</li>
+              <li class="list-group-item">Time : {{cData.time}}</li>
+            </ul>
+            <div class="card-body">
+              <a href="admissionform" class="card-link"><button class="btn btn-outline-light ms-5">Register Now</button></a>
+            
+            </div>
+          </div>
+    </div>
+  
+</div>
+
+
+
